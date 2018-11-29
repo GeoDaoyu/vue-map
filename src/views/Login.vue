@@ -5,9 +5,6 @@
         <h3 class="title">登陆界面再丑都不能少</h3>
       </div>
       <el-form-item prop="username">
-        <span class="svg-container">
-          <svg-icon icon-class="user" />
-        </span>
         <el-input
           v-model="loginForm.username"
           name="username"
@@ -16,9 +13,6 @@
         />
       </el-form-item>
       <el-form-item prop="password">
-        <span class="svg-container">
-          <svg-icon icon-class="password" />
-        </span>
         <el-input
           type="password"
           v-model="loginForm.password"
@@ -34,7 +28,7 @@
 <script>
 export default {
   name: 'Login',
-  data() {
+  data () {
     return {
       loginForm: {
         username: 'admin',
@@ -44,7 +38,7 @@ export default {
   },
   methods: {
     logIn: function () {
-      this.$router.push({path: '/home'})
+      this.$router.push({ path: '/home' })
     }
   }
 }

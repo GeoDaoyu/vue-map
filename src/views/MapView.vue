@@ -1,6 +1,5 @@
 <template>
-  <div id="map">
-  </div>
+  <base-map></base-map>
 </template>
 
 <script lang="ts">

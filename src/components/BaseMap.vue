@@ -1,16 +1,41 @@
 <template>
-  <div>    
-  </div>
+  <div id="viewDiv"></div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
-
-@Component
-export default class BaseMap extends Vue {
+<script>
+import * as esriLoader from 'esri-loader'
+import { createMap } from './esrimap'
+export default {
+  data () {
+    return {
+      mapTitle: 'Create Map'
+    }
+  },
+  methods: {
+  },
+  mounted () {
+    if (!esriLoader.isLoaded()) {
+      esriLoader.bootstrap((err) => {
+        if (err) {
+          console.error(err)
+        }
+        createMap(esriLoader)
+      }, {
+        url: 'https://js.arcgis.com/4.9/'
+      })
+    } else {
+      createMap(esriLoader)
+    }
+  }
 }
 </script>
-
-<style scoped lang="scss">
-
+<style scoped>
+  @import url('https://js.arcgis.com/4.9/esri/themes/light/main.css');
+  #viewDiv {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 </style>
