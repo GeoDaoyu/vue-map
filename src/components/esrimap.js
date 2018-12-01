@@ -1,24 +1,20 @@
-export const createMap = function (loader) {
-  const esriLoader = loader
-  esriLoader.dojoRequire(
-    [
-      'esri/views/MapView',
-      'esri/Map'
-    ],
-    (
-      MapView,
-      Map
-    ) => {
-      const map = new Map({
-        basemap: 'topo-vector'
-      })
-      const view = new MapView({
-        map: map,
-        container: 'viewDiv',
-        zoom: zoom,
-        center: center
-      })
-      // map.add(layer)
-    }
-  )
+import * as jsapi from './jsapi'
+
+export async function createMap () {
+  const [
+    MapView,
+    Map
+  ] = await jsapi.load([
+    'esri/views/MapView',
+    'esri/Map'
+  ])
+  const map = new Map({
+    basemap: 'topo-vector'
+  })
+  const view = new MapView({
+    map: map,
+    container: 'viewDiv',
+    zoom: 7,
+    center: [120, 30]
+  })
 }

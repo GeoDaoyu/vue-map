@@ -14,18 +14,7 @@ export default {
   methods: {
   },
   mounted () {
-    if (!esriLoader.isLoaded()) {
-      esriLoader.bootstrap((err) => {
-        if (err) {
-          console.error(err)
-        }
-        createMap(esriLoader)
-      }, {
-        url: 'https://js.arcgis.com/4.9/'
-      })
-    } else {
-      createMap(esriLoader)
-    }
+    createMap()
   }
 }
 </script>
