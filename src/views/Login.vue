@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     logIn: function () {
-      this.$router.push({ path: '/home' })
+      this.$router.push({ path: '/mapview' })
     }
   }
 }

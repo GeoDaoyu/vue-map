@@ -9,7 +9,7 @@ export async function createMap () {
     'esri/Map'
   ])
   const map = new Map({
-    basemap: 'topo-vector'
+    basemap: 'streets'
   })
   const view = new MapView({
     map: map,
