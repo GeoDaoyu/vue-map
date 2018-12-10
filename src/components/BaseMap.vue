@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { createMap } from './esrimap'
+import { createMap } from './tdtmap'
 export default {
   data () {
     return {
