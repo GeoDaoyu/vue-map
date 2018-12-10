@@ -81,4 +81,8 @@ export async function createMap () {
     }),
     scale: 2000000
   })
+
+  // 去掉缩放按钮和esri logo
+  mapView.ui.remove('zoom')
+  mapView.ui.remove('attribution')
 }
