@@ -1,4 +1,4 @@
-import * as jsapi from './jsapi'
+import * as jsapi from '@/utils/jsapi'
 
 export async function createMap () {
   const [

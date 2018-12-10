@@ -3,15 +3,11 @@
 </template>
 
 <script>
-import * as esriLoader from 'esri-loader'
 import { createMap } from './esrimap'
 export default {
   data () {
     return {
-      mapTitle: 'Create Map'
     }
-  },
-  methods: {
   },
   mounted () {
     createMap()
