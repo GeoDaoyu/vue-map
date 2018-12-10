@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import MapView from './views/MapView.vue'
 
 Vue.use(Router)
 
@@ -11,11 +11,6 @@ export default new Router({
       redirect: '/login'
     },
     {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
-    {
       path: '/login',
       name: 'login',
       component: () => import('./views/Login.vue')
@@ -23,7 +18,7 @@ export default new Router({
     {
       path: '/mapview',
       name: 'mapview',
-      component: () => import('./views/MapView.vue')
+      component: MapView
     }
   ]
 })

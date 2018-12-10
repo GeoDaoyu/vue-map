@@ -7,3 +7,9 @@ export default {
   name: 'app'
 }
 </script>
+
+<style lang="scss">
+html {
+  background-color: #eee;
+}
+</style>
