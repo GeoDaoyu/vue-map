@@ -9,8 +9,9 @@ export default {
     return {
     }
   },
-  mounted () {
-    createMap()
+  async mounted () {
+    const map = await createMap()
+    this.$store.commit('init', map)
   }
 }
 </script>

@@ -5,10 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    map: {},
+    mapView: {}
   },
   mutations: {
-
+    init (state, payload) {
+      state.map = payload
+    },
+    layserVisible (state, payload) {
+      state.map = payload
+    }
   },
   actions: {
 

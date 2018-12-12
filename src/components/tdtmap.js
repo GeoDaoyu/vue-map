@@ -63,11 +63,12 @@ export async function createMap () {
     visible: false,
     id: 'tdtImgLayer'
   })
-  const map =new Map({
+  const map = new Map({
     basemap: {
       baseLayers: [tdtVecLayer, tdtImgLayer, tdtCvaLayer]
     }
   })
+
   const mapView = new MapView({
     container: 'viewDiv',
     map: map,
@@ -85,4 +86,5 @@ export async function createMap () {
   // 去掉缩放按钮和esri logo
   mapView.ui.remove('zoom')
   mapView.ui.remove('attribution')
+  return map
 }
