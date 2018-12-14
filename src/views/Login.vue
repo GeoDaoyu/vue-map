@@ -45,7 +45,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-
 @Component
 export default class Login extends Vue {
   form = {
@@ -96,5 +95,11 @@ export default class Login extends Vue {
     line-height: 40px;
     font-size: 14px;
     margin: -15px auto;
+  }
+</style>
+
+<style lang="scss">
+  .el-input-group__prepend {
+    background-color: #ecf5ff;
   }
 </style>

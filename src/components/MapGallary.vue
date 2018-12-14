@@ -1,38 +1,36 @@
 <template>
-  <el-button @click="changeV">切换</el-button>
+  <el-radio-group v-model="activeName" @change="changeBaseLayersVisible">
+    <el-radio-button label="地图"></el-radio-button>
+    <el-radio-button label="影像"></el-radio-button>
+  </el-radio-group>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-    }
-  },
-  computed: {
-    baseMap () {
-      return this.$store.state.map
-    }
-  },
-  methods: {
-    changeV () {
-      console.log(this.$store.state.map.basemap.baseLayers.items[1].visible)
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 
-      this.baseMap.basemap.baseLayers.items[0].visible = false
-      this.baseMap.basemap.baseLayers.items[1].visible = false
-      console.log(this.$store.state.map.basemap.baseLayers.items[1].visible)
-
-      // this.$store.commit('layserVisible', this.baseMap) 
+@Component
+export default class MapGallary extends Vue {
+  activeName = '地图'
+  changeBaseLayersVisible (label: string) {
+    let map = window.map
+    switch (label) {
+      case '地图':
+        map.basemap.baseLayers.items[0].visible = true
+        map.basemap.baseLayers.items[1].visible = false
+        break
+      case '影像':
+        map.basemap.baseLayers.items[0].visible = false
+        map.basemap.baseLayers.items[1].visible = true
+        break
     }
-    
   }
 }
 </script>
+
 <style scoped>
-  .el-button {
+  .el-radio-group {
     position: absolute;
-    top: 20px;
     bottom: 20px;
-    left: 20px;
     right: 20px;
   }
 </style>

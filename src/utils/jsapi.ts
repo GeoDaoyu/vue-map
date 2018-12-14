@@ -1,6 +1,6 @@
 import esriLoader from 'esri-loader'
 
-const apiRoot = 'https://js.arcgis.com/4.9/init.js'
+const apiRoot = 'https://js.arcgis.com/4.10/init.js'
 const dojoConfig = {
   async: true,
   deps: ['@dojo/framework/shim/main'],
@@ -14,14 +14,7 @@ function configEsriLoader () {
   esriLoader.utils.Promise = Promise
 }
 
-export default function preload () {
-  return esriLoader.loadScript({
-    dojoConfig,
-    url: apiRoot
-  })
-}
-
-export function load (modules) {
+export default function load (modules: Array<string>) {
   configEsriLoader()
   return esriLoader.loadModules(modules, {
     dojoConfig,

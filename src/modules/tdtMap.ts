@@ -1,8 +1,8 @@
-import * as jsapi from '@/utils/jsapi'
-export async function createMap () {
+import load from '@/utils/jsapi'
+export default async function createMap (container: string) {
   const [
     TileInfo, WebTileLayer, Map, MapView, Point, SpatialReference
-  ] = await jsapi.load([
+  ] = await load([
     'esri/layers/support/TileInfo',
     'esri/layers/WebTileLayer',
     'esri/Map',
@@ -63,15 +63,14 @@ export async function createMap () {
     visible: false,
     id: 'tdtImgLayer'
   })
-  const map = new Map({
+  window.map = new Map({
     basemap: {
       baseLayers: [tdtVecLayer, tdtImgLayer, tdtCvaLayer]
     }
   })
-
   const mapView = new MapView({
     container: 'viewDiv',
-    map: map,
+    map: window.map,
     spatialReference: {
       wkid: 4490
     },
@@ -86,5 +85,4 @@ export async function createMap () {
   // 去掉缩放按钮和esri logo
   mapView.ui.remove('zoom')
   mapView.ui.remove('attribution')
-  return map
 }
