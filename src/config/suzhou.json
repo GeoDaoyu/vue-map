@@ -1,0 +1,113 @@
+{
+  "resultcode": "200",
+  "reason": "successed!",
+  "result": {
+    "sk": {
+      "temp": "8",
+      "wind_direction": "东风",
+      "wind_strength": "2级",
+      "humidity": "59%",
+      "time": "16:31"
+    },
+    "today": {
+      "temperature": "5℃~11℃",
+      "weather": "多云",
+      "weather_id": {
+        "fa": "01",
+        "fb": "01"
+      },
+      "wind": "东北风3-5级",
+      "week": "星期五",
+      "city": "苏州",
+      "date_y": "2018年12月14日",
+      "dressing_index": "较冷",
+      "dressing_advice": "建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。",
+      "uv_index": "最弱",
+      "comfort_index": "",
+      "wash_index": "较适宜",
+      "travel_index": "较不宜",
+      "exercise_index": "较不宜",
+      "drying_index": ""
+    },
+    "future": {
+      "day_20181214": {
+        "temperature": "5℃~11℃",
+        "weather": "多云",
+        "weather_id": {
+          "fa": "01",
+          "fb": "01"
+        },
+        "wind": "东北风3-5级",
+        "week": "星期五",
+        "date": "20181214"
+      },
+      "day_20181215": {
+        "temperature": "6℃~12℃",
+        "weather": "阴转小雨",
+        "weather_id": {
+          "fa": "02",
+          "fb": "07"
+        },
+        "wind": "东南风3-5级",
+        "week": "星期六",
+        "date": "20181215"
+      },
+      "day_20181216": {
+        "temperature": "4℃~12℃",
+        "weather": "阴转晴",
+        "weather_id": {
+          "fa": "02",
+          "fb": "00"
+        },
+        "wind": "西风4-5级",
+        "week": "星期日",
+        "date": "20181216"
+      },
+      "day_20181217": {
+        "temperature": "3℃~12℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "西风3-5级",
+        "week": "星期一",
+        "date": "20181217"
+      },
+      "day_20181218": {
+        "temperature": "7℃~15℃",
+        "weather": "晴转多云",
+        "weather_id": {
+          "fa": "00",
+          "fb": "01"
+        },
+        "wind": "西南风3-5级",
+        "week": "星期二",
+        "date": "20181218"
+      },
+      "day_20181219": {
+        "temperature": "4℃~12℃",
+        "weather": "阴转晴",
+        "weather_id": {
+          "fa": "02",
+          "fb": "00"
+        },
+        "wind": "西风4-5级",
+        "week": "星期三",
+        "date": "20181219"
+      },
+      "day_20181220": {
+        "temperature": "6℃~12℃",
+        "weather": "阴转小雨",
+        "weather_id": {
+          "fa": "02",
+          "fb": "07"
+        },
+        "wind": "东南风3-5级",
+        "week": "星期四",
+        "date": "20181220"
+      }
+    }
+  },
+  "error_code": 0
+}

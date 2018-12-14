@@ -97,9 +97,3 @@ export default class Login extends Vue {
     margin: -15px auto;
   }
 </style>
-
-<style lang="scss">
-  .el-input-group__prepend {
-    background-color: #ecf5ff;
-  }
-</style>
