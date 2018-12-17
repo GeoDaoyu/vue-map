@@ -1,12 +1,12 @@
 import load from '@/utils/jsapi'
+import MapStore from '@/modules/MapStore'
+
 export default async function createMap (container: string) {
   const [
     TileInfo, WebTileLayer, Map, MapView, Point, SpatialReference
   ] = await load([
     'esri/layers/support/TileInfo',
     'esri/layers/WebTileLayer',
-    'esri/Map',
-    'esri/views/MapView',
     'esri/geometry/Point',
     'esri/geometry/SpatialReference'
   ])
@@ -63,7 +63,7 @@ export default async function createMap (container: string) {
     visible: false,
     id: 'tdtImgLayer'
   })
-  window.map = new Map({
+   = new Map({
     basemap: {
       baseLayers: [tdtVecLayer, tdtImgLayer, tdtCvaLayer]
     }
