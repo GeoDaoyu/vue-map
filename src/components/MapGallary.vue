@@ -8,6 +8,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import MapStore from '@/modules/MapStore'
+
 @Component
 export default class MapGallary extends Vue {
   activeName = '地图'

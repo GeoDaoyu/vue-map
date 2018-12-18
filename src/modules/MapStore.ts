@@ -1,11 +1,13 @@
 import initMap from '@/modules/initMap'
+
 export default class MapStore {
   private map: any = null
   private mapView: any = null
   static mapStore: MapStore
   constructor () {
+    this.init()
   }
-  public async init () {
+  private async init () {
     const response = await initMap('viewDiv')
     this.map = response.map
     this.mapView = response.mapView

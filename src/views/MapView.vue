@@ -13,14 +13,13 @@ import MapStore from '@/modules/MapStore'
 
 @Component({
   components: {
-    MapGallary,
-    Search
+  MapGallary,
+  Search
   },
   created () {
-    const mapStore = MapStore.getMapStore()
-    mapStore.init()
+  const mapStore = MapStore.getMapStore()
   }
-})
+  })
 
 export default class MapView extends Vue {}
 </script>

@@ -1,4 +1,5 @@
 import load from '@/utils/jsapi'
+
 export default async function init (container: string) {
   const [
     TileInfo, WebTileLayer, Map, MapView, Point, SpatialReference
@@ -81,5 +82,5 @@ export default async function init (container: string) {
     }),
     scale: 2000000
   })
-  return { map, mapView}
+  return { map, mapView }
 }
