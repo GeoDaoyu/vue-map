@@ -6,13 +6,14 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-property-decorator'
-import mapStore from '@/modules/mapStore'
-
+import { Component, Vue } from 'vue-property-decorator'
+import MapStore from '@/modules/MapStore'
+@Component
 export default class MapGallary extends Vue {
   activeName = '地图'
   changeBaseLayersVisible (label: string) {
-    let map = mapStore.getMap()
+    const mapstore: MapStore = MapStore.getMapStore()
+    let map = mapstore.getMap()
     switch (label) {
       case '地图':
         map.basemap.baseLayers.items[0].visible = true

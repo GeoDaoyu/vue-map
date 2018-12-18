@@ -1,6 +1,5 @@
 <template>
   <div id="viewDiv">
-    <base-map></base-map>
     <map-gallary></map-gallary>
     <search></search>
   </div>
@@ -8,22 +7,21 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import BaseMap from '@/components/BaseMap.vue'
 import MapGallary from '@/components/MapGallary.vue'
 import Search from '@/components/Search.vue'
 import MapStore from '@/modules/MapStore'
 
 @Component({
   components: {
-    BaseMap,
     MapGallary,
     Search
   },
   created () {
-    console.log("mapview.vue created")
-    MapStore
+    const mapStore = MapStore.getMapStore()
+    mapStore.init()
   }
 })
+
 export default class MapView extends Vue {}
 </script>
 

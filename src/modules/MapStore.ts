@@ -1,16 +1,20 @@
-import initmap from '@/modules/initMap'
-class MapStore {
+import initMap from '@/modules/initMap'
+export default class MapStore {
   private map: any = null
   private mapView: any = null
-  private instance: any = null
+  static mapStore: MapStore
   constructor () {
-    this.init()
   }
-  private init () {
-    if (!this.instance) {
-      this.instance = initmap()
-      { this.map, this.mapView } = this.instance
+  public async init () {
+    const response = await initMap('viewDiv')
+    this.map = response.map
+    this.mapView = response.mapView
+  }
+  static getMapStore () {
+    if (!this.mapStore) {
+      this.mapStore = new MapStore()
     }
+    return this.mapStore
   }
   public getMap () {
     return this.map
@@ -19,4 +23,3 @@ class MapStore {
     return this.mapView
   }
 }
-export default new MapStore()
