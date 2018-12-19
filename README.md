@@ -52,4 +52,4 @@ npm run lint
 
 [MIT](https://github.com/GeoDaoyu/vue-map/blob/master/LICENSE)
 
-Copyright (c) 2017-present GeoDaoyu
+Copyright (c) 2018-present GeoDaoyu
