@@ -1,34 +1,57 @@
-# vue-map
-
-## Project setup
 ```
+## Introduction
+
+[vue-map](https://github.com/GeoDaoyu/vue-map) is a 2D map demo. It based on [vue](https://github.com/vuejs/vue) and [ArcGIS JS API](https://developers.arcgis.com/javascript/index.html).
+
+## Features
+
+​```
+- Login / Logout
+
+- MapView
+  - Basemap Gallery
+  - Search
+
+​```
+
+## Getting started
+
+​```bash
+# clone the project
+git clone https://github.com/GeoDaoyu/vue-map.git
+
+# install dependency
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# compiles and hot-reloads for development
 npm run serve
-```
+​```
 
-### Compiles and minifies for production
-```
+This will automatically open http://127.0.0.1:8090.
+
+## Build
+
+​```bash
+# compiles and minifies for production
 npm run build
-```
+​```
 
-### Run your tests
-```
+## Advanced
+
+​```bash
+# run tests
 npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
+# run unit tests
 npm run test:unit
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# lints and fixes files
+npm run lint
+​```
+
+## License
+
+[MIT](https://github.com/GeoDaoyu/vue-map/blob/master/LICENSE)
+
+Copyright (c) 2017-present GeoDaoyu
+```
