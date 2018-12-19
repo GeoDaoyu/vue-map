@@ -1,4 +1,3 @@
-```
 ## Introduction
 
 [vue-map](https://github.com/GeoDaoyu/vue-map) is a 2D map demo. It based on [vue](https://github.com/vuejs/vue) and [ArcGIS JS API](https://developers.arcgis.com/javascript/index.html).
@@ -54,4 +53,3 @@ npm run lint
 [MIT](https://github.com/GeoDaoyu/vue-map/blob/master/LICENSE)
 
 Copyright (c) 2017-present GeoDaoyu
-```
