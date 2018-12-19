@@ -4,18 +4,18 @@
 
 ## Features
 
-​```
+```
 - Login / Logout
 
 - MapView
   - Basemap Gallery
   - Search
 
-​```
+```
 
 ## Getting started
 
-​```bash
+```bash
 # clone the project
 git clone https://github.com/GeoDaoyu/vue-map.git
 
@@ -24,20 +24,20 @@ npm install
 
 # compiles and hot-reloads for development
 npm run serve
-​```
+```
 
 This will automatically open http://127.0.0.1:8090.
 
 ## Build
 
-​```bash
+```bash
 # compiles and minifies for production
 npm run build
-​```
+```
 
 ## Advanced
 
-​```bash
+```bash
 # run tests
 npm run test
 
@@ -46,7 +46,7 @@ npm run test:unit
 
 # lints and fixes files
 npm run lint
-​```
+```
 
 ## License
 
