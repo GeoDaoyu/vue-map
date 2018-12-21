@@ -1,6 +1,6 @@
 import esriLoader from 'esri-loader'
 
-const apiRoot = 'https://js.arcgis.com/4.10/init.js'
+const apiRoot = 'http://127.0.0.1:8080/jsapi/4.10/init.js'
 const dojoConfig = {
   async: true,
   deps: ['@dojo/framework/shim/main'],
